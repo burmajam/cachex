@@ -56,7 +56,7 @@ defmodule Cachex.Worker do
             { :ok, new_value } ->
               { :missing, new_value }
             { :loaded, new_value } = result ->
-              set(state, key, new_value)
+              set(state, key, new_value, options)
               result
           end
       end
